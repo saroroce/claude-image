@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<style>
+  body { width: 1600px; height: 800px; }
+  .left { position: absolute; left: 96px; top: 168px; width: 700px; }
+  .left h1 {
+    font: 800 104px/1 var(--sans);
+    letter-spacing: -0.045em;
+    background: linear-gradient(95deg, #c4b5fd 0%, #8b5cf6 35%, #22d3ee 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding-bottom: 0.2em;
+    margin-bottom: 6px;
+  }
+  .left p { font: 400 30px/1.45 var(--sans); color: #b3b8c8; max-width: 640px; }
+  .left p b { color: #fff; font-weight: 600; }
+  .chips { display: flex; gap: 12px; margin-top: 34px; flex-wrap: wrap; }
+  .foot { position: absolute; left: 96px; bottom: 58px; font: 500 17px var(--mono); color: var(--dim); letter-spacing: 0.02em; }
+  .card {
+    position: absolute;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 34px 70px rgba(0, 0, 0, 0.6);
+  }
+  .card img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .tag {
+    position: absolute; left: 14px; bottom: 14px;
+    padding: 6px 12px; border-radius: 999px;
+    font: 600 14px var(--sans); color: #eafff5;
+    background: rgba(8, 20, 16, 0.72); border: 1px solid rgba(52, 211, 153, 0.5);
+    backdrop-filter: blur(6px);
+  }
+  .a { left: 850px; top: 60px; width: 560px; height: 315px; transform: rotate(-3deg); }
+  .b { left: 1040px; top: 318px; width: 500px; height: 281px; transform: rotate(3.5deg); }
+  .c { left: 800px; top: 410px; width: 420px; height: 236px; transform: rotate(-2.5deg); }
+  .d { left: 1190px; top: 548px; width: 350px; height: 197px; transform: rotate(2deg); }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="grid"></div>
+
+<div class="left">
+  <span class="eyebrow">Claude Code skill</span>
+  <h1>claude-image</h1>
+  <p>Generate images and video <b>without leaving your chat.</b> Free drafts, premium finals, and a price tag before every paid call.</p>
+  <div class="chips">
+    <span class="chip"><span class="dot"></span>Free draft tier</span>
+    <span class="chip"><span class="dot" style="background:#fbbf24"></span>Cost guard</span>
+    <span class="chip"><span class="dot" style="background:#22d3ee"></span>Scroll-driven video</span>
+  </div>
+</div>
+<div class="foot">FLUX.2 &nbsp;·&nbsp; FLUX.3 Video &nbsp;·&nbsp; Cloudflare Workers AI</div>
+
+<div class="card a"><img src="img/cabin.jpg" alt=""><span class="tag">draft · free</span></div>
+<div class="card b"><img src="img/puppy.jpg" alt=""><span class="tag">draft · free</span></div>
+<div class="card c"><img src="img/sneaker.jpg" alt=""><span class="tag">draft · free</span></div>
+<div class="card d"><img src="img/city.jpg" alt=""><span class="tag">draft · free</span></div>
+</body>
+</html>

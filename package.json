@@ -1,0 +1,10 @@
+{
+  "name": "claude-image",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "node --test --test-timeout=30000 tests/run.test.mjs",
+    "docs": "bash docs/src/render.sh"
+  }
+}

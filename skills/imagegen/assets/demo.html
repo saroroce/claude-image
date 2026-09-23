@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>scroll-sequence demo</title>
+  <style>
+    html, body { margin: 0; background: #0b0b0c; color: #f4f4f5; font-family: system-ui, sans-serif; }
+    .intro, .outro { min-height: 60vh; display: grid; place-items: center; font-size: 2rem; }
+    .sequence { position: relative; height: 400vh; }
+    .sequence canvas { position: sticky; top: 0; width: 100%; height: 100vh; display: block; background: #111; }
+    .label { position: fixed; left: 16px; bottom: 16px; font: 14px/1.4 ui-monospace, monospace; background: #000a; padding: 6px 10px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <section class="intro">Scroll down</section>
+  <section class="sequence" id="sequence"><canvas id="canvas"></canvas></section>
+  <section class="outro">End</section>
+  <div class="label" id="label">loading</div>
+  <script type="module">
+    import { createScrollSequence } from './scroll-sequence.js';
+    const label = document.getElementById('label');
+    const seq = await createScrollSequence({
+      container: document.getElementById('sequence'),
+      canvas: document.getElementById('canvas'),
+      manifestUrl: './frames/manifest.json',
+      onProgress: (progress, frame) => {
+        label.textContent = `progress ${progress.toFixed(2)} / frame ${frame}`;
+      },
+    });
+    window.__seq = seq;
+  </script>
+</body>
+</html>

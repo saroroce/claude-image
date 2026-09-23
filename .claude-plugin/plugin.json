@@ -1,0 +1,9 @@
+{
+  "name": "claude-image",
+  "description": "Generate images and short videos with FLUX on Cloudflare Workers AI: a free draft tier, premium tiers, cost estimates and spend limits, plus a scroll-driven video pipeline.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "saroroce"
+  }
+}

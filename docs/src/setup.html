@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<style>
+  body { width: 1500px; height: 800px; }
+  .wrap { padding: 56px 80px; }
+  .win { margin-top: 34px; }
+  .term { font-size: 18px; }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="grid"></div>
+<div class="wrap">
+  <span class="eyebrow">/imagegen install</span>
+  <h1 class="title">Set up once, in about a minute</h1>
+  <p class="sub">The wizard opens next to your chat. The token is typed into a hidden prompt and saved outside your repos.</p>
+
+  <div class="win">
+    <div class="bar"><i></i><i></i><i></i><b>imagegen setup</b></div>
+<div class="term"><span class="c">Cloudflare key for imagegen</span>
+
+<span class="k">Step 1.</span> Create a token and copy your Account ID:
+  <span class="u">https://dash.cloudflare.com/?to=/:account/ai/workers-ai</span>
+  Use REST API → Create a Workers AI API Token → Create API Token → Copy API Token
+  The Account ID is on the same page.
+  <span class="d">Manual route: https://dash.cloudflare.com/profile/api-tokens → Custom token, Account / Workers AI: Read and Edit.</span>
+  <span class="warn">Never use the Global API Key: it opens the whole account.</span>
+<span class="k">Step 2.</span> Paste the Account ID below, then the token (input is hidden).
+<span class="d">Paid models and video need credits: https://dash.cloudflare.com/?to=/:account/ai/ai-gateway</span>
+
+<span class="ok">The key is stored only in ~/.config/imagegen/env (mode 600).</span>
+
+Account ID: <span class="caret"></span></div>
+  </div>
+</div>
+</body>
+</html>

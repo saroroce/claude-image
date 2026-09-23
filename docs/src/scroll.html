@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<style>
+  body { width: 1600px; height: 690px; }
+  .wrap { padding: 60px 72px; }
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 40px; }
+  .win .view { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+  .cap { margin-top: 18px; display: flex; align-items: center; gap: 10px; font: 500 17px var(--sans); color: #c5c9d6; }
+  .cap b { font: 700 15px var(--mono); color: var(--mint); background: rgba(52, 211, 153, 0.12); border: 1px solid rgba(52, 211, 153, 0.4); padding: 4px 10px; border-radius: 999px; }
+  .bar { height: 34px; }
+  .bar i { width: 10px; height: 10px; }
+  .bar b { font-size: 12.5px; }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="grid"></div>
+<div class="wrap">
+  <span class="eyebrow">assets/scroll-sequence.js</span>
+  <h1 class="title">A clip becomes a scroll experience</h1>
+  <p class="sub">72 frames, one canvas, no dependencies. Three real captures of the demo page at different scroll positions.</p>
+
+  <div class="row">
+    <div>
+      <div class="win"><div class="bar"><i></i><i></i><i></i><b>localhost</b></div><img class="view" src="img/scroll-0.jpg" alt=""></div>
+      <div class="cap"><b>0%</b> frame 1 of 72</div>
+    </div>
+    <div>
+      <div class="win"><div class="bar"><i></i><i></i><i></i><b>localhost</b></div><img class="view" src="img/scroll-50.jpg" alt=""></div>
+      <div class="cap"><b>50%</b> frame 37 of 72</div>
+    </div>
+    <div>
+      <div class="win"><div class="bar"><i></i><i></i><i></i><b>localhost</b></div><img class="view" src="img/scroll-100.jpg" alt=""></div>
+      <div class="cap"><b>100%</b> frame 72 of 72</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

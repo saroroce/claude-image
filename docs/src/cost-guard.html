@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<style>
+  body { width: 1500px; height: 860px; }
+  .wrap { padding: 56px 80px; }
+  .win { margin-top: 34px; }
+  .term { font-size: 18px; }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="grid"></div>
+<div class="wrap">
+  <span class="eyebrow">Cost guard</span>
+  <h1 class="title">Know the price before you pay</h1>
+  <p class="sub">Estimates are free and need no key. Paid calls ask first, and video always does.</p>
+
+  <div class="win">
+    <div class="bar"><i></i><i></i><i></i><b>Terminal</b></div>
+<div class="term"><span class="p">$</span> <span class="c">imagegen estimate image --tier draft "a cozy cabin in the snow"</span>
+<span class="d">model: FLUX.2 klein 4B (draft), @cf/black-forest-labs/flux-2-klein-4b
+size: 1024x1024, references: 0</span>
+<span class="ok">estimate: 104.2 neurons (free allowance left today: 10000), within the free allowance</span>
+
+<span class="p">$</span> <span class="c">imagegen estimate image --tier hero --mp 4 "a cozy cabin in the snow"</span>
+<span class="d">model: FLUX.2 max (hero), black-forest-labs/flux-2-max
+size: 2048x2048, references: 0</span>
+<span class="warn">estimate: ≈ $0.28 (upper bound above 1 MP)</span>
+
+<span class="p">$</span> <span class="c">imagegen video --duration 8 --image cabin.jpg "camera slowly pushes in, smoke rises from the chimney"</span>
+<span class="d">model: FLUX.3 Video, black-forest-labs/flux-3-video
+mode: i2v, 8 s, hd, aspect auto, audio off</span>
+<span class="warn">estimate: ≈ $1.36</span>
+<span class="err">error: confirmation needed: request ≈ $1.36 (video always requires confirmation).
+Tell the user the amount and rerun with --yes only after they agree</span> <span class="d">[exit code 3]</span></div>
+  </div>
+</div>
+</body>
+</html>

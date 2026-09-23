@@ -1,0 +1,14 @@
+{
+  "name": "saroroce",
+  "description": "Claude Code plugins by saroroce",
+  "owner": {
+    "name": "saroroce"
+  },
+  "plugins": [
+    {
+      "name": "claude-image",
+      "source": "./",
+      "description": "FLUX image and video generation through Cloudflare Workers AI with cost guards"
+    }
+  ]
+}

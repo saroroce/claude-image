@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<style>
+  body { width: 1600px; height: 745px; }
+  .wrap { padding: 60px 72px; }
+  .row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; margin-top: 42px; }
+  .tier {
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid var(--line);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+    padding: 26px 24px 26px;
+    min-height: 400px;
+    overflow: hidden;
+  }
+  .tier::before {
+    content: "";
+    position: absolute; left: 0; right: 0; top: 0; height: 5px;
+    background: var(--accent);
+  }
+  .tier .name {
+    display: inline-block;
+    font: 700 15px var(--mono);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 14%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+    padding: 6px 12px; border-radius: 999px;
+  }
+  .tier h3 { font: 700 26px/1.2 var(--sans); margin-top: 22px; letter-spacing: -0.01em; }
+  .tier .price { font: 800 44px/1.05 var(--sans); margin-top: 18px; letter-spacing: -0.03em; }
+  .tier .price small { display: block; font: 500 16px var(--sans); color: var(--dim); letter-spacing: 0; margin-top: 8px; }
+  .tier ul { list-style: none; margin-top: 22px; font: 400 17px/1.5 var(--sans); color: #b8bdcc; }
+  .tier li { padding-left: 20px; position: relative; margin-bottom: 8px; }
+  .tier li::before { content: ""; position: absolute; left: 0; top: 10px; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  .ribbon {
+    position: absolute; right: 18px; top: 22px;
+    font: 700 13px var(--sans); letter-spacing: 0.08em; text-transform: uppercase;
+    color: #062b1f; background: var(--mint); padding: 5px 10px; border-radius: 6px;
+  }
+  .note { margin-top: 26px; font: 400 16px var(--sans); color: var(--dim); }
+  .note code { font: 500 15px var(--mono); color: #c4b5fd; }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="grid"></div>
+<div class="wrap">
+  <span class="eyebrow">Models</span>
+  <h1 class="title">The right model for each job</h1>
+  <p class="sub">One command, five tiers. Start free, spend only where it shows.</p>
+
+  <div class="row">
+    <div class="tier" style="--accent: #34d399">
+      <span class="ribbon">Free</span>
+      <span class="name">draft</span>
+      <h3>FLUX.2 klein 4B</h3>
+      <div class="price">$0<small>inside the daily free allowance</small></div>
+      <ul><li>About 95 images a day at 1024²</li><li>Fixed 4 steps: the fastest tier</li><li>Up to 4 reference images</li></ul>
+    </div>
+    <div class="tier" style="--accent: #8b5cf6">
+      <span class="name">final</span>
+      <h3>FLUX.2 pro</h3>
+      <div class="price">from $0.03<small>per megapixel</small></div>
+      <ul><li>Production-ready images</li><li>Editing with up to 8 references</li><li>jpeg, png or webp</li></ul>
+    </div>
+    <div class="tier" style="--accent: #22d3ee">
+      <span class="name">text</span>
+      <h3>FLUX.2 flex</h3>
+      <div class="price">from $0.05<small>per megapixel</small></div>
+      <ul><li>Readable typography</li><li>Posters, UI mockups, infographics</li><li>Tunable steps and guidance</li></ul>
+    </div>
+    <div class="tier" style="--accent: #fbbf24">
+      <span class="name">hero</span>
+      <h3>FLUX.2 max</h3>
+      <div class="price">from $0.07<small>per megapixel</small></div>
+      <ul><li>Highest fidelity</li><li>Hardest edits, best consistency</li><li>Strongest prompt following</li></ul>
+    </div>
+    <div class="tier" style="--accent: #fb7185">
+      <span class="name">video</span>
+      <h3>FLUX.3 Video</h3>
+      <div class="price">$0.17<small>per second, HD (draft $0.06)</small></div>
+      <ul><li>5 to 20 second clips</li><li>Image-to-video, audio optional</li><li>Always asks before it runs</li></ul>
+    </div>
+  </div>
+  <p class="note">Draft uses Cloudflare's free daily allowance. Paid prices are Black Forest Labs list prices as of 2026-09-21; your Cloudflare dashboard shows what you are billed. Override with <code>imagegen config set prices.pro.first 0.03</code>.</p>
+</div>
+</body>
+</html>
